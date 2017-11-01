@@ -6,3 +6,10 @@
 --     created_at   (timestamp)     default to current timestamp
 --
 -- Write your query below:
+
+CREATE TABLE IF NOT EXISTS users 
+(fullname VARCHAR(140) NOT NULL, 
+username VARCHAR(15) NOT NULL UNIQUE, 
+email VARCHAR(200) NOT NULL PRIMARY KEY, 
+PASSWORD VARCHAR(100) NOT NULL, 
+created_at TIMESTAMP DEFAULT now());
